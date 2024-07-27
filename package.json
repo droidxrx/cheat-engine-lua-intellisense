@@ -1,0 +1,48 @@
+{
+	"name": "cheat-engine-lua-intellisense",
+	"publisher": "droidxrx",
+	"displayName": "Cheat Engine Lua Intellisense",
+	"description": "VSCode Cheat Engine Intellisense",
+	"icon": "image/logo.png",
+	"version": "0.0.1",
+	"author": {
+		"name": "droidxrx",
+		"email": "droidxrx@gmail.com"
+	},
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/droidxrx/cheat-engine-lua-intellisense"
+	},
+	"engines": {
+		"vscode": "^1.67.0"
+	},
+	"keywords": [
+		"Lua",
+		"IntelliSense",
+		"EmmyLua",
+		"Cheat Engine"
+	],
+	"categories": [
+		"Linters",
+		"Programming Languages"
+	],
+	"activationEvents": [
+		"onLanguage:lua",
+		"onWebviewPanel:lua-doc",
+		"onCommand:extension.lua.doc"
+	],
+	"extensionDependencies": [
+		"sumneko.lua"
+	],
+	"main": "./dist/extension.js",
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./"
+	},
+	"devDependencies": {
+		"@types/vscode": "1.67.0",
+		"@types/node": "20.x",
+		"typescript": "5.4.5"
+	}
+}
