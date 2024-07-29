@@ -4,7 +4,7 @@
 	"displayName": "Cheat Engine Lua Intellisense",
 	"description": "VSCode Cheat Engine Intellisense",
 	"icon": "image/logo.png",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"author": {
 		"name": "droidxrx",
 		"email": "droidxrx@gmail.com"
@@ -38,7 +38,8 @@
 	"main": "./dist/extension.js",
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
-		"compile": "tsc -p ./"
+		"compile": "npm run mergeMetaLua && tsc -p ./",
+		"mergeMetaLua": "node ./mergeMetaLua.js"
 	},
 	"devDependencies": {
 		"@types/vscode": "1.67.0",
