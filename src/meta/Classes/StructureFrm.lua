@@ -24,7 +24,7 @@ function StructureFrm.addGroup() end
 ---@return StructureElement
 function StructureFrm.getSelectedStructElement() end
 
----@param address integer
+---@param address CEAddressString | integer
 ---@return StructureFrm
 function createStructureForm(address) end
 

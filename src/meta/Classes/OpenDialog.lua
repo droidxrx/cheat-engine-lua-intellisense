@@ -1,0 +1,37 @@
+---@meta
+
+---@class OpenDialog : FileDialog
+---A string formatted as "[param1, param2, param3]" to set OpenDialogs options
+---```
+---Valid parameters are:
+---ofReadOnly,
+---ofOverwritePrompt  : if selected file exists shows a message, that file will be overwritten
+---ofHideReadOnly     : hide read only file
+---ofNoChangeDir      : do not change current directory
+---ofShowHelp         : show a help button
+---ofNoValidate
+---ofAllowMultiSelect : allow multiselection
+---ofExtensionDifferent
+---ofPathMustExist    : shows an error message if selected path does not exist
+---ofFileMustExist    : shows an error message if selected file does not exist
+---ofCreatePrompt
+---ofShareAware
+---ofNoReadOnlyReturn : do not return filenames that are readonly
+---ofNoTestFileCreate
+---ofNoNetworkButton
+---ofNoLongNames
+---ofOldStyleDialog
+---ofNoDereferenceLinks : do not expand filenames
+---ofEnableIncludeNotify
+---ofEnableSizing     : dialog can be resized, e.g. via the mouse
+---ofDontAddToRecent  : do not add the path to the history list
+---ofForceShowHidden  : show hidden files
+---ofViewDetail       : details are OS and interface dependent
+---ofAutoPreview      : details are OS and interface dependent
+---```
+---@field Options string
+
+---Creates an opendialog object
+---@param owner any
+---@return OpenDialog
+function createOpenDialog(owner) end

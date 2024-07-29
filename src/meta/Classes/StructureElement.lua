@@ -39,22 +39,22 @@ function StructureElement.getVartype() end
 function StructureElement.setVartype(vartype) end
 
 ---Gets the memory from the specified address and interprets it according to the element type
----@param address integer
+---@param address CEAddressString | integer
 ---@return any
 function StructureElement.getValue(address) end
 
 ---Sets the memory at the specified address to the interpreted value according to the element type
----@param address integer
+---@param address CEAddressString | integer
 ---@param value any
 function StructureElement.setValue(address, value) end
 
 ---same as getValue but uses the offset to calculate the final address
----@param baseaddress integer
+---@param baseaddress CEAddressString | integer
 ---@return any
 function StructureElement.getValueFromBase(baseaddress) end
 
 ---same as setValue but uses the offset to calculate the final address
----@param baseaddress integer
+---@param baseaddress CEAddressString | integer
 ---@param value any
 function StructureElement.setValueFromBase(baseaddress, value) end
 

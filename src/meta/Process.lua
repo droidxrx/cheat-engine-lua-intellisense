@@ -81,8 +81,3 @@ function unpause() end
 ---Returns true if the the process Cheat Engine is attached to is 64-bit.
 ---@return boolean
 function targetIs64Bit() end
-
----Returns a table containing information about each module in the current process, or the specified process id Each entry is a table with fields.
----@param ProcessID integer The process id to use insted of current process
----@return table
-function enumModules(ProcessID) end

@@ -9,13 +9,13 @@ function getAddress(AddressString, local_) end
 
 ---Passes the given string to Cheat Engine's symbol handler and returns the corresponding address as an integer, or nil if not found. Similar to getAddress when errorOnLookup is false, but returns nil instead. \
 ---Can be a module name or an export. Set local to true if you wish to query the symbol table of the CE process.
----@param AddressString CEAddressString The AddressString to convert to an integer
+---@param Address CEAddressString | integer
 ---@param local_? boolean Set to true if you wish to query the symbol table of the CE process
 ---@return integer
-function getAddressSafe(AddressString, local_) end
+function getAddressSafe(Address, local_) end
 
 ---Returns the symbolname for the given address. If no symbolname is found, it will return a hexadecimal string
----@param address CEAddressString The address to convert to a string
+---@param address CEAddressString | integer
 ---@return string
 function getNameFromAddress(address) end
 
@@ -34,12 +34,12 @@ function reinitializeSymbolhandler() end
 
 ---Returns true if the provided address resides inside a module (example: .exe or .dll) \
 ---If errorOnLookupFailure is set to true (the default value), if you look up a symbol that does not exist, it will throw an error. With errorOnLookupFailure set to false, it will return false.
----@param address CEAddressString The address to look up
+---@param address CEAddressString | integer The address to look up
 ---@return boolean
 function inModule(address) end
 
 ---Returns true if the provided address resides inside a module (example: .exe or .dll) stored inside the system's Windows folder (usually C:\Windows\).
----@param address CEAddressString The address to look up
+---@param address CEAddressString | integer The address to look up
 ---@return boolean
 function inSystemModule(address) end
 
