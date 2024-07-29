@@ -52,9 +52,3 @@ function writeDouble(Address, Value) end
 ---@param WideChar? boolean Set to true if it is encoded using a widechar formatting
 ---@return boolean # Returns true on success.
 function writeString(Address, Text, WideChar) end
-
----Writes a specified block of memory to a file. Useful for extracting specific files from memory. Like a decoded .SWF, or a image, or whatever you might want to look up.
----@param Filename string The filename to save the memoryblock to
----@param Address CEAddressString | integer The address of the block to save
----@param Size integer The number of bytes to save.
-function writeRegionToFile(Filename, Address, Size) end

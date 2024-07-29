@@ -1,0 +1,3 @@
+---@meta
+
+---@class CustomBrush : CanvasHelper

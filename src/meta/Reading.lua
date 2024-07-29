@@ -48,8 +48,3 @@ function readDouble(Address) end
 ---@param isWideString? boolean	Determines if this string is read out as a widestring or a normal ascii string
 ---@return string
 function readString(Address, Maxlength, isWideString) end
-
----Reads a file from memory and writes the contents of that file to the specified address
----@param Filename string The filename to load into memory
----@param Address CEAddressString | integer The address to write the block of data to
-function readRegionFromFile(Filename, Address) end
