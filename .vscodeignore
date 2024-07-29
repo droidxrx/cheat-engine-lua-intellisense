@@ -10,3 +10,7 @@ vsc-extension-quickstart.md
 **/*.ts
 **/.vscode-test.*
 *.vsix
+image/*.gif
+*-lock.json
+mergeMetaLua.js
+node_modules/**
