@@ -72,7 +72,7 @@ function updateLuarcJson(bIsOnActive: boolean) {
 			const libraries = [...luarcJson[keyWorkspaceLibrary]];
 			const diagnosticsDisable = [...luarcJson[keyDiagnosticsDisable]];
 
-            luarcJson[keyWorkspaceLibrary] = libraries.filter((v, i) => pathNormalize(v) != metaPath);
+            luarcJson[keyWorkspaceLibrary] = libraries.filter((v, i) => !v.toLowerCase().includes(extension.id));
 
             luarcJson[keyDiagnosticsDisable] = diagnosticsDisable.filter((v, i) => v.toLowerCase() != "inject-field");
 
@@ -87,7 +87,7 @@ function updateLuarcJson(bIsOnActive: boolean) {
 }
 
 export function activate(context: vscode.ExtensionContext) {
-	extension.id = context.extension.id;
+	extension.id = context.extension.id.toLowerCase();
 	extension.path = pathNormalize(context.extension.extensionPath);
 	extension.workspaceFolders = vscode.workspace.workspaceFolders != undefined ? vscode.workspace.workspaceFolders.map((v) => v.uri.fsPath) : null;
 
